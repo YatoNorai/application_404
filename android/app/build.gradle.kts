@@ -9,8 +9,8 @@ android {
     namespace = "com.example.application_404"
     compileSdk = flutter.compileSdkVersion
 
-    buildToolsVersion = 35.0.0
-    ndkVersion = 27.1.12297006
+    buildToolsVersion = "35.0.0"
+    ndkVersion = "27.1.12297006"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
