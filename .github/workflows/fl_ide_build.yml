@@ -17,6 +17,7 @@ jobs:
           cache: true
       - name: Configure Android SDK path
         run: |
+          mkdir -p android
           echo "sdk.dir=$ANDROID_HOME" > android/local.properties
           sed -i '/android\.aapt2FromMavenOverride/d' android/gradle.properties 2>/dev/null || true
           grep -qxF 'org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m' android/gradle.properties 2>/dev/null || echo 'org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m' >> android/gradle.properties
